@@ -1,0 +1,24 @@
+#include<iostream.h>
+#include<conio.h>
+#include<process.h>
+int main()
+{
+void funA(int s);
+void funB(int &);
+void funC(int *);
+clrscr();
+int s=6;
+funA(s);
+cout<<"\n value of s ="<<s<<"address of s is"<<unsigned(&s);
+funB(s);
+cout<<"\n value of s="<<s<<"address of s is"<<unsigned(&s);
+funC(&s);
+cout<<"\n value of s="<<s<<"address of s is"<<unsigned(&s);
+return 0;
+}
+void funA(int i)
+{i++;}
+void funB(int &j)
+{j++;}
+void funC(int *k)
+{++*k;}
